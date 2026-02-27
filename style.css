@@ -75,24 +75,16 @@ body {
     color: #76BA5A; /* يتغير اللون للأخضر الفاتح عند اللمس */
 }
 
-/* تنسيق دائرة عدد المنتجات (الرقم الصغير) */.cart-count {
-    background-color: #28a745; /* اللون الأخضر الحالي */
+
+.cart-count {
+    background-color: #28a745;
     color: white;
-    font-size: 10px; /* تصغير حجم الرقم */
-    font-weight: bold;
-    
-    /* لجعلها دائرية وصغيرة */
-    width: 16px; 
-    height: 16px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%; /* هذا هو السر لجعلها دائرية تماماً */
-    
-    /* التحكم في موقعها فوق السلة */
+    font-size: 12px;
+    padding: 2px 6px;
+    border-radius: 10px; 
     position: absolute;
     top: -5px;
-    right: -8px;
+    right: -5px;
 }
 
 
