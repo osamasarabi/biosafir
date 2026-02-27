@@ -75,12 +75,12 @@ body {
     color: #76BA5A; /* يتغير اللون للأخضر الفاتح عند اللمس */
 }
 
-/* تنسيق دائرة عدد المنتجات (الرقم الصغير) */
+
 .cart-badge {
     position: absolute;
     top: -5px;
     right: -8px;
-    background-color: #ff4d4d; /* لون أحمر للتنبيه */
+    background-color: #ff4d4d;
     color: white;
     font-size: 11px;
     font-weight: bold;
