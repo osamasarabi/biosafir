@@ -84,19 +84,10 @@ body {
     color: white;
     font-size: 10px;
     font-weight: bold;
-    padding: 2px 6px;
+    padding: 0;
     border-radius: 50%;
     min-width: 12px;
     text-align: center;
-    
-    width: 16px;
-    height: 16px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: absolute;
-    top: -5px;
-    right: -8px;
 }
 
 
