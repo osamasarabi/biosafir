@@ -77,15 +77,21 @@ body {
 
 
 .cart-count {
-    background-color: #28a745;
+    background-color: #e44d26; /* اللون الأحمر كما في الصورة */
     color: white;
-    font-size: 12px;
-    padding: 2px 6px;
-    border-radius: 10px; 
+    font-size: 10px; /* حجم رقم صغير */
+    font-weight: bold;
+    padding: 1px 5px; /* هذا ما يعطيها الشكل البيضاوي */
+    border-radius: 10px; /* انحناء الزوايا لتصبح بيضوية */
     position: absolute;
-    top: -5px;
-    right: -5px;
+    top: -2px; /* لرفعها قليلاً فوق السلة */
+    right: -5px; /* لتحريكها قليلاً لليمين */
+    min-width: 12px;
+    text-align: center;
+    line-height: 1;
 }
+
+
 
 
 
