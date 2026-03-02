@@ -1,84 +1,63 @@
-/* 1. إعدادات الصفحة العامة (الوضع الداكن) */
+/* 1. تفعيل الوضع الداكن للموقع بالكامل */
 body {
-    background-color: #121212; /* خلفية سوداء فخمة */
-    color: #ffffff;           /* نصوص بيضاء واضحة */
+    background-color: #121212; /* خلفية سوداء عميقة */
+    color: #ffffff;           /* نصوص بيضاء */
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    direction: rtl;           /* تنسيق اللغة العربية من اليمين لليسار */
-    padding-bottom: 220px;    /* مساحة في الأسفل لمنع الشريط من غلق المحتوى */
+    direction: rtl;           /* لضمان التنسيق العربي */
+    padding-bottom: 250px;    /* مساحة إضافية لكي لا يختفي المحتوى خلف القائمة */
 }
 
-/* 2. الهيدر (Header) */
+/* 2. تنسيق الهيدر */
 header {
-    background-color: #1f1f1f; /* رمادي غامق للهيدر */
-    padding: 15px 20px;
+    background-color: #1f1f1f;
+    padding: 15px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     border-bottom: 1px solid #333;
 }
 
-/* 3. شعار BIO والسلة */
-.logo-bio {
-    background-color: #2ecc71; /* الأخضر المميز لـ BIO */
-    color: #121212;
-    padding: 2px 8px;
-    border-radius: 4px;
-    font-weight: bold;
-}
-
-.cart-badge {
-    position: absolute;
-    top: -5px;
-    right: -8px;
-    background-color: #ff4d4d;
-    color: white;
-    font-size: 10px;
-    font-weight: bold;
-    width: 18px;       /* أبعاد متساوية للدائرة */
-    height: 18px;
-    border-radius: 50%; /* شكل دائري تماماً */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: 2px solid #1f1f1f;
-}
-
-/* 4. شريط التنقل العمودي الدائري (بدون أيقونات) */
+/* 3. شريط القائمة العمودي والدائري */
 .bottom-nav-vertical {
     position: fixed;
-    bottom: 30px;        /* رفعه عن الحافة ليظهر التدوير الجانبي */
+    bottom: 30px;            /* رفع القائمة عن الحافة السفلية */
     left: 50%;
-    transform: translateX(-50%); /* توسيط الشريط في منتصف الشاشة */
-    width: 160px;        /* عرض محدد ليظهر بشكل عمودي أنيق */
+    transform: translateX(-50%); /* لتوسيط القائمة في منتصف الشاشة */
+    width: 140px;            /* عرض محدد لجعلها عمودية وأنيقة */
     background-color: #1a1a1a;
     display: flex;
-    flex-direction: column; /* ترتيب الكلمات عمودياً فوق بعضها */
+    flex-direction: column;  /* تغيير اتجاه القائمة لتصبح عمودية */
     align-items: center;
-    border-radius: 40px; /* حواف دائرية كبيرة جداً من الجوانب */
-    padding: 20px 0;
-    border: 1px solid #333;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+    justify-content: center;
+    padding: 15px 0;
+    
+    /* جعل الحواف دائرية بالكامل من الجوانب كما في الصورة */
+    border-radius: 40px; 
+    
+    border: 1px solid #333;  /* إطار بسيط لإبرازها في الوضع الداكن */
+    box-shadow: 0 8px 25px rgba(0,0,0,0.7); /* ظل لإعطاء عمق */
     z-index: 1000;
 }
 
-/* 5. تنسيق نصوص القائمة */
+/* 4. تنسيق النصوص داخل القائمة (بدون أيقونات) */
 .nav-item-text {
     text-decoration: none;
-    color: #888;         /* لون رمادي للأقسام غير النشطة */
-    font-size: 15px;
+    color: #888;             /* لون رمادي للأقسام غير النشطة */
+    font-size: 14px;
     font-weight: bold;
-    padding: 12px 0;
+    padding: 12px 0;        /* مسافة عمودية بين الكلمات */
     width: 100%;
     text-align: center;
-    transition: 0.3s;
+    transition: 0.3s ease;
 }
 
-/* لون القسم النشط */
+/* لون القسم النشط (الأخضر الخاص بـ BIO) */
 .nav-item-text.active {
-    color: #2ecc71;      /* لون أخضر عند الضغط على القسم */
+    color: #2ecc71; 
 }
+
 
 
 
