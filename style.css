@@ -1,62 +1,98 @@
-/* 1. تفعيل الوضع الداكن للموقع بالكامل */
 body {
-    background-color: #121212; /* خلفية سوداء عميقة */
-    color: #ffffff;           /* نصوص بيضاء */
-    font-family: 'Arial', sans-serif;
     margin: 0;
-    padding: 0;
-    direction: rtl;           /* لضمان التنسيق العربي */
-    padding-bottom: 250px;    /* مساحة إضافية لكي لا يختفي المحتوى خلف القائمة */
+    font-family: Arial, sans-serif;
 }
 
-/* 2. تنسيق الهيدر */
-header {
-    background-color: #1f1f1f;
-    padding: 15px;
+.main-header {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between; /* دفع العناصر للأطراف */
     align-items: center;
-    border-bottom: 1px solid #333;
+    padding: 10px 20px;
+    background-color: #fff;
+    border-bottom: 1px solid #eee;
 }
 
-/* 3. شريط القائمة العمودي والدائري */
-.bottom-nav-vertical {
-    position: fixed;
-    bottom: 30px;            /* رفع القائمة عن الحافة السفلية */
-    left: 50%;
-    transform: translateX(-50%); /* لتوسيط القائمة في منتصف الشاشة */
-    width: 140px;            /* عرض محدد لجعلها عمودية وأنيقة */
-    background-color: #1a1a1a;
+‎/* حاوية الشعار والاسم (اليسار) */
+.header-left {
     display: flex;
-    flex-direction: column;  /* تغيير اتجاه القائمة لتصبح عمودية */
     align-items: center;
-    justify-content: center;
-    padding: 15px 0;
-    
-    /* جعل الحواف دائرية بالكامل من الجوانب كما في الصورة */
-    border-radius: 40px; 
-    
-    border: 1px solid #333;  /* إطار بسيط لإبرازها في الوضع الداكن */
-    box-shadow: 0 8px 25px rgba(0,0,0,0.7); /* ظل لإعطاء عمق */
-    z-index: 1000;
+    gap: 10px;
 }
 
-/* 4. تنسيق النصوص داخل القائمة (بدون أيقونات) */
-.nav-item-text {
-    text-decoration: none;
-    color: #888;             /* لون رمادي للأقسام غير النشطة */
-    font-size: 14px;
-    font-weight: bold;
-    padding: 12px 0;        /* مسافة عمودية بين الكلمات */
+‎/* حاوية السلة (اليمين) */
+.header-right {
+    display: flex;
+    align-items: center;
+}
+
+.logo-container {
+    width: 48px;
+    height: 28px;
+}
+
+.logo-svg {
     width: 100%;
-    text-align: center;
-    transition: 0.3s ease;
+    height: 100%;
 }
 
-/* لون القسم النشط (الأخضر الخاص بـ BIO) */
-.nav-item-text.active {
-    color: #2ecc71; 
+.brand-name {
+    font-size: 20px;
+    margin-right: 0px;
+    margin-left: 0px;
+    position: relative;
+    top: -0px; 
+    top: 1px; 
+    font-weight: bold;
+    color: #333;
 }
+
+.cart-btn a {
+    text-decoration: none;
+    font-size: 24px;
+}
+
+
+
+‎/* تنسيق حاوية السلة */
+.cart-icon-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    color: #4E7C3B; /* لون السلة الأخضر الغامق */
+    text-decoration: none;
+}
+
+‎/* التحكم في حجم السلة */
+.feather-shopping-cart {
+    width: 28px;  /* يمكنك تكبير أو تصغير السلة من هنا */
+    height: 28px;
+    transition: transform 0.2s ease;
+}
+
+‎/* تأثير عند تمرير الماوس */
+.cart-icon-wrapper:hover .feather-shopping-cart {
+    transform: scale(1.1);
+    color: #76BA5A; /* يتغير اللون للأخضر الفاتح عند اللمس */
+}
+
+
+.cart-badge {
+    position: absolute;
+    top: -5px;
+    right: -8px;
+    background-color: #ff4d4d;
+    color: white;
+    font-size: 10px;
+    font-weight: bold;
+    padding: 2px 4px;
+    border-radius: 50%;
+    min-width: 12px;
+    text-align: center;
+}
+
+
+
+
 
 
 
