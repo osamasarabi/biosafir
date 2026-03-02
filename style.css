@@ -124,51 +124,55 @@ body {
 }
 
 
-.bottom-nav {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 65px;
-    background-color: #1a1a1a; /* لون داكن كما في الفيديو */
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    border-top: 1px solid #333;
-    z-index: 1000;
-    padding-bottom: env(safe-area-inset-bottom); /* لدعم هواتف آيفون الحديثة */
-}
 
-.nav-item {
-    text-decoration: none;
+
+
+
+
+
+
+
+
+/* تنسيق الشريط السفلي العمودي والدائري */
+.bottom-nav-vertical {
+    position: fixed;
+    bottom: 20px;       /* رفعه قليلاً عن الحافة السفلية ليظهر التدوير */
+    left: 10%;          /* لتوسط الشريط في الشاشة */
+    width: 80%;         /* عرض الشريط */
+    background-color: #1a1a1a; /* لون داكن مناسب للثيم */
     display: flex;
-    flex-direction: column;
+    flex-direction: column; /* جعل العناصر تترتب عمودياً */
     align-items: center;
     justify-content: center;
-    color: #888; /* لون الأقسام غير النشطة */
-    transition: all 0.3s ease;
-    flex: 1;
+    padding: 15px 0;
+    
+    /* جعل الشريط دائرياً من الجوانب */
+    border-radius: 50px; /* رقم كبير لضمان التدوير الكامل */
+    
+    box-shadow: 0 4px 15px rgba(0,0,0,0.5); /* ظل لإبراز الشريط */
+    z-index: 1000;
 }
 
-.nav-item i {
-    font-size: 20px; /* حجم الأيقونة */
-    margin-bottom: 4px;
-}
-
-.nav-item span {
-    font-size: 11px; /* حجم الخط الصغير كما في الفيديو */
-    font-weight: 500;
+/* تنسيق الكلمات داخل الشريط */
+.nav-item-text {
+    text-decoration: none;
+    color: #888;         /* لون الكلمات غير النشطة */
+    font-size: 14px;     /* حجم خط مناسب ومقروء */
+    font-weight: bold;
+    padding: 10px 0;    /* مسافة عمودية بين الكلمات */
+    transition: color 0.3s ease;
+    width: 100%;
+    text-align: center;
 }
 
 /* لون القسم النشط (الأخضر الخاص بـ BIO) */
-.nav-item.active {
-    color: #2ecc71; 
+.nav-item-text.active {
+    color: #2ecc71;
 }
 
-/* تأثير بسيط عند الضغط */
-.nav-item:active {
-    transform: scale(0.9);
-}
+
+
+ 
 
 
 
