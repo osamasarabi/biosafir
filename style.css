@@ -132,48 +132,35 @@ body {
 
 
 
-
-/* تنسيق الشريط السفلي العمودي والدائري */
 .bottom-nav-vertical {
     position: fixed;
-    bottom: 20px;       /* رفعه قليلاً عن الحافة السفلية ليظهر التدوير */
-    left: 10%;          /* لتوسط الشريط في الشاشة */
-    width: 80%;         /* عرض الشريط */
-    background-color: #1a1a1a; /* لون داكن مناسب للثيم */
+    bottom: 20px;       /* لرفعه عن الحافة ليظهر التدوير */
+    left: 50%;          /* لتوسيطه */
+    transform: translateX(-50%); /* لموازنة التوسيط بدقة */
+    width: 70%;         /* عرض أنيق للشريط */
+    background-color: #1a1a1a;
     display: flex;
-    flex-direction: column; /* جعل العناصر تترتب عمودياً */
+    flex-direction: column; /* ترتيب عمودي للكلمات */
     align-items: center;
-    justify-content: center;
-    padding: 15px 0;
-    
-    /* جعل الشريط دائرياً من الجوانب */
-    border-radius: 50px; /* رقم كبير لضمان التدوير الكامل */
-    
-    box-shadow: 0 4px 15px rgba(0,0,0,0.5); /* ظل لإبراز الشريط */
+    border-radius: 30px; /* السر في الحواف الدائرية من الجوانب */
+    padding: 10px 0;
+    border: 1px solid #333;
     z-index: 1000;
 }
 
-/* تنسيق الكلمات داخل الشريط */
 .nav-item-text {
     text-decoration: none;
-    color: #888;         /* لون الكلمات غير النشطة */
-    font-size: 14px;     /* حجم خط مناسب ومقروء */
+    color: #888;
+    font-size: 13px;
     font-weight: bold;
-    padding: 10px 0;    /* مسافة عمودية بين الكلمات */
-    transition: color 0.3s ease;
+    padding: 8px 0;
     width: 100%;
     text-align: center;
 }
 
-/* لون القسم النشط (الأخضر الخاص بـ BIO) */
 .nav-item-text.active {
-    color: #2ecc71;
+    color: #2ecc71; /* اللون الأخضر للقسم المختار */
 }
 
-
-
- 
-
-
-
+    
 
