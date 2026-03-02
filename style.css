@@ -1,17 +1,17 @@
-/* 1. الإعدادات العامة والوضع الداكن */
+/* 1. إعدادات الصفحة العامة (الوضع الداكن) */
 body {
     background-color: #121212; /* خلفية سوداء فخمة */
-    color: #ffffff;
+    color: #ffffff;           /* نصوص بيضاء واضحة */
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    direction: rtl; /* للتنسيق العربي */
-    padding-bottom: 250px; /* مساحة في الأسفل لكي لا يغطي الشريط المحتوى */
+    direction: rtl;           /* تنسيق اللغة العربية من اليمين لليسار */
+    padding-bottom: 220px;    /* مساحة في الأسفل لمنع الشريط من غلق المحتوى */
 }
 
 /* 2. الهيدر (Header) */
 header {
-    background-color: #1f1f1f;
+    background-color: #1f1f1f; /* رمادي غامق للهيدر */
     padding: 15px 20px;
     display: flex;
     justify-content: space-between;
@@ -19,16 +19,15 @@ header {
     border-bottom: 1px solid #333;
 }
 
-/* 3. شعار BIO الأخضر */
+/* 3. شعار BIO والسلة */
 .logo-bio {
-    background-color: #2ecc71;
+    background-color: #2ecc71; /* الأخضر المميز لـ BIO */
     color: #121212;
     padding: 2px 8px;
     border-radius: 4px;
     font-weight: bold;
 }
 
-/* 4. السلة الدائرية (Cart Badge) */
 .cart-badge {
     position: absolute;
     top: -5px;
@@ -37,38 +36,38 @@ header {
     color: white;
     font-size: 10px;
     font-weight: bold;
-    width: 18px;
+    width: 18px;       /* أبعاد متساوية للدائرة */
     height: 18px;
-    border-radius: 50%; /* دائرة كاملة */
+    border-radius: 50%; /* شكل دائري تماماً */
     display: flex;
     align-items: center;
     justify-content: center;
     border: 2px solid #1f1f1f;
 }
 
-/* 5. شريط التنقل العمودي الدائري (Bottom Nav) */
+/* 4. شريط التنقل العمودي الدائري (بدون أيقونات) */
 .bottom-nav-vertical {
     position: fixed;
-    bottom: 30px;        /* رفعه عن الحافة ليظهر التدوير */
+    bottom: 30px;        /* رفعه عن الحافة ليظهر التدوير الجانبي */
     left: 50%;
-    transform: translateX(-50%);
-    width: 180px;        /* عرض محدد ليكون بشكل "كبسولة" عمودية */
+    transform: translateX(-50%); /* توسيط الشريط في منتصف الشاشة */
+    width: 160px;        /* عرض محدد ليظهر بشكل عمودي أنيق */
     background-color: #1a1a1a;
     display: flex;
-    flex-direction: column; /* ترتيب عمودي كما طلبت */
+    flex-direction: column; /* ترتيب الكلمات عمودياً فوق بعضها */
     align-items: center;
-    border-radius: 40px; /* حواف دائرية كبيرة من الجوانب */
+    border-radius: 40px; /* حواف دائرية كبيرة جداً من الجوانب */
     padding: 20px 0;
     border: 1px solid #333;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.6);
     z-index: 1000;
 }
 
-/* 6. تنسيق الكلمات داخل القائمة (بدون أيقونات) */
+/* 5. تنسيق نصوص القائمة */
 .nav-item-text {
     text-decoration: none;
     color: #888;         /* لون رمادي للأقسام غير النشطة */
-    font-size: 15px;     /* حجم خط واضح */
+    font-size: 15px;
     font-weight: bold;
     padding: 12px 0;
     width: 100%;
@@ -78,8 +77,9 @@ header {
 
 /* لون القسم النشط */
 .nav-item-text.active {
-    color: #2ecc71;      /* أخضر BIO للقسم الحالي */
+    color: #2ecc71;      /* لون أخضر عند الضغط على القسم */
 }
+
 
 
     
