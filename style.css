@@ -1,94 +1,86 @@
+/* إعدادات الصفحة الأصلية */
 body {
+    background-color: #ffffff; /* الخلفية البيضاء */
+    color: #333333;           /* نصوص غامقة */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
-    font-family: Arial, sans-serif;
+    padding: 0;
+    direction: rtl;           /* اتجاه اللغة العربية */
 }
 
-.main-header {
-    display: flex;
-    justify-content: space-between; /* دفع العناصر للأطراف */
-    align-items: center;
+/* تنسيق الهيدر */
+header {
+    background-color: #ffffff;
     padding: 10px 20px;
-    background-color: #fff;
-    border-bottom: 1px solid #eee;
-}
-
-‎/* حاوية الشعار والاسم (اليسار) */
-.header-left {
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    gap: 10px;
+    border-bottom: 1px solid #f0f0f0;
 }
 
-‎/* حاوية السلة (اليمين) */
-.header-right {
-    display: flex;
-    align-items: center;
-}
-
+/* تنسيق الشعار (BIO SAFIR) */
 .logo-container {
-    width: 48px;
-    height: 28px;
+    display: flex;
+    align-items: center;
 }
 
-.logo-svg {
-    width: 100%;
-    height: 100%;
-}
-
-.brand-name {
-    font-size: 20px;
-    margin-right: 0px;
-    margin-left: 0px;
-    position: relative;
-    top: -0px; 
-    top: 1px; 
+.logo-bio {
+    background-color: #76a04d; /* اللون الأخضر الفاتح من الصورة */
+    color: #ffffff;
+    padding: 2px 8px;
+    border-radius: 4px;
     font-weight: bold;
-    color: #333;
+    font-size: 18px;
+    margin-left: 5px;
 }
 
-.cart-btn a {
-    text-decoration: none;
-    font-size: 24px;
+.logo-text {
+    font-size: 20px;
+    font-weight: bold;
+    color: #333333;
+    letter-spacing: 1px;
 }
 
-
-
-‎/* تنسيق حاوية السلة */
-.cart-icon-wrapper {
+/* تنسيق السلة والرقم الأحمر */
+.cart-icon-container {
     position: relative;
     display: flex;
     align-items: center;
-    color: #4E7C3B; /* لون السلة الأخضر الغامق */
-    text-decoration: none;
 }
-
-‎/* التحكم في حجم السلة */
-.feather-shopping-cart {
-    width: 28px;  /* يمكنك تكبير أو تصغير السلة من هنا */
-    height: 28px;
-    transition: transform 0.2s ease;
-}
-
-‎/* تأثير عند تمرير الماوس */
-.cart-icon-wrapper:hover .feather-shopping-cart {
-    transform: scale(1.1);
-    color: #76BA5A; /* يتغير اللون للأخضر الفاتح عند اللمس */
-}
-
 
 .cart-badge {
     position: absolute;
     top: -5px;
-    right: -8px;
-    background-color: #ff4d4d;
+    right: -10px;
+    background-color: #e74c3c; /* اللون الأحمر للتنبيه */
     color: white;
     font-size: 10px;
     font-weight: bold;
-    padding: 2px 4px;
+    width: 18px;
+    height: 18px;
     border-radius: 50%;
-    min-width: 12px;
-    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
+
+/* تنسيق النصوص الترحيبية */
+.hero-section {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+h1 {
+    font-size: 26px;
+    margin-bottom: 10px;
+    color: #000000;
+}
+
+p {
+    font-size: 16px;
+    color: #666666;
+}
+
 
 
 
