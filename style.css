@@ -4,33 +4,34 @@ body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    direction: rtl; /* لضمان توافق النصوص العربية */
+    direction: rtl; /* اتجاه الصفحة العام */
 }
 
-/* تنسيق الهيدر: العناصر موزعة بين اليمين واليسار */
+/* تنسيق الهيدر: السلة أقصى اليمين والشعار أقصى اليسار */
 header {
     background-color: #ffffff;
     padding: 12px 20px;
     display: flex;
-    flex-direction: row-reverse; /* لعكس الترتيب: الشعار يسار والسلة يمين */
+    flex-direction: row; /* جعل السلة يمين والشعار يسار */
     justify-content: space-between;
     align-items: center;
     border-bottom: 1px solid #f0f0f0;
 }
 
-/* تصميم الشعار المكون من نصفين ملونين */
+/* حاوية الشعار: تترتب من اليسار لليمن */
 .logo-container {
     display: flex;
+    flex-direction: row-reverse; /* عكس الترتيب ليصبح BIO يسار و SAFIR يمينها */
     align-items: center;
     gap: 10px;
 }
 
+/* تصميم الشعار المنقسم (فاتح فوق وغامق تحت) */
 .logo-bio {
-    /* النصف العلوي أخضر فاتح والنصف السفلي أخضر غامق */
     background: linear-gradient(to bottom, #94c173 50%, #4f7033 50%); 
     color: white;
     padding: 4px 12px;
-    border-radius: 12px; /* حواف دائرية كالصورة */
+    border-radius: 12px;
     font-weight: bold;
     font-size: 20px;
     display: flex;
@@ -44,14 +45,13 @@ header {
     color: #333;
 }
 
-/* تنسيق السلة في جهة اليمين */
+/* السلة في أقصى اليمين */
 .cart-icon-container {
     position: relative;
     display: flex;
     align-items: center;
 }
 
-/* أيقونة السلة بلونها الأخضر */
 .cart-icon-container svg {
     stroke: #76a04d;
 }
@@ -60,7 +60,7 @@ header {
     position: absolute;
     top: -5px;
     right: -10px;
-    background-color: #e74c3c; /* دائرة حمراء للرقم 0 */
+    background-color: #e74c3c;
     color: white;
     font-size: 10px;
     font-weight: bold;
@@ -72,9 +72,8 @@ header {
     justify-content: center;
 }
 
-/* النصوص الترحيبية */
 .hero-section {
-    text-align: right;
+    text-align: center;
     padding: 40px 20px;
 }
 
