@@ -1,22 +1,82 @@
+/* الإعدادات الأساسية - النمط الفاتح */
+body {
+    background-color: #ffffff;
+    color: #000000;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    direction: rtl; /* لضمان الترتيب من اليمين لليسار */
+}
+
+/* تنسيق الهيدر العلوي */
+header {
+    background-color: #ffffff;
+    padding: 10px 15px;
+    display: flex;
+    justify-content: space-between; /* هذا ما يجعل الشعار يميناً والسلة يساراً */
+    align-items: center;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+/* الشعار الأخضر والاسم */
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo-bio {
+    background-color: #76a04d; /* اللون الأخضر الأصلي للشعار */
+    color: white;
+    padding: 3px 8px;
+    border-radius: 4px;
+    font-weight: bold;
+    font-size: 16px;
+    margin-left: 8px; /* مسافة بين المربع الأخضر والاسم */
+}
+
+.logo-text {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+}
+
+/* أيقونة السلة والرقم الأحمر */
+.cart-icon-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
 .cart-badge {
     position: absolute;
-    top: -5px;
-    right: -8px;
-    background-color: #ff4d4d;
+    top: -6px;
+    right: -10px;
+    background-color: #e74c3c; /* اللون الأحمر */
     color: white;
     font-size: 10px;
     font-weight: bold;
-    
-    /* التعديلات الجوهرية للدائرة */
-    width: 16px;        /* عرض ثابت */
-    height: 16px;       /* ارتفاع ثابت مساوٍ للعرض */
-    border-radius: 50%; /* تجعل المربع دائرة تماماً */
-    
-    /* توسيط الرقم داخل الدائرة */
+    width: 17px;
+    height: 17px;
+    border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 0;         /* حذف الـ padding القديم لأنه يسبب الشكل البيضاوي */
+}
+
+/* النصوص الترحيبية */
+.hero-section {
+    text-align: right; /* محاذاة النص لليمين كما في الصورة */
+    padding: 30px 20px;
+}
+
+h1 {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 15px;
+    color: #555;
 }
 
 
