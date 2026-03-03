@@ -1,62 +1,71 @@
-/* الإعدادات الأساسية - النمط الفاتح */
+/* الإعدادات الأساسية */
 body {
     background-color: #ffffff;
-    color: #000000;
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    direction: rtl; /* لضمان الترتيب من اليمين لليسار */
+    direction: rtl; /* لضمان توافق النصوص العربية */
 }
 
-/* تنسيق الهيدر العلوي */
+/* تنسيق الهيدر: العناصر موزعة بين اليمين واليسار */
 header {
     background-color: #ffffff;
-    padding: 10px 15px;
+    padding: 12px 20px;
     display: flex;
-    justify-content: space-between; /* هذا ما يجعل الشعار يميناً والسلة يساراً */
+    flex-direction: row-reverse; /* لعكس الترتيب: الشعار يسار والسلة يمين */
+    justify-content: space-between;
     align-items: center;
     border-bottom: 1px solid #f0f0f0;
 }
 
-/* الشعار الأخضر والاسم */
+/* تصميم الشعار المكون من نصفين ملونين */
 .logo-container {
     display: flex;
     align-items: center;
+    gap: 10px;
 }
 
 .logo-bio {
-    background-color: #76a04d; /* اللون الأخضر الأصلي للشعار */
+    /* النصف العلوي أخضر فاتح والنصف السفلي أخضر غامق */
+    background: linear-gradient(to bottom, #94c173 50%, #4f7033 50%); 
     color: white;
-    padding: 3px 8px;
-    border-radius: 4px;
+    padding: 4px 12px;
+    border-radius: 12px; /* حواف دائرية كالصورة */
     font-weight: bold;
-    font-size: 16px;
-    margin-left: 8px; /* مسافة بين المربع الأخضر والاسم */
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .logo-text {
-    font-size: 18px;
+    font-size: 20px;
     font-weight: bold;
     color: #333;
 }
 
-/* أيقونة السلة والرقم الأحمر */
+/* تنسيق السلة في جهة اليمين */
 .cart-icon-container {
     position: relative;
     display: flex;
     align-items: center;
 }
 
+/* أيقونة السلة بلونها الأخضر */
+.cart-icon-container svg {
+    stroke: #76a04d;
+}
+
 .cart-badge {
     position: absolute;
-    top: -6px;
+    top: -5px;
     right: -10px;
-    background-color: #e74c3c; /* اللون الأحمر */
+    background-color: #e74c3c; /* دائرة حمراء للرقم 0 */
     color: white;
     font-size: 10px;
     font-weight: bold;
-    width: 17px;
-    height: 17px;
+    width: 18px;
+    height: 18px;
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -65,18 +74,8 @@ header {
 
 /* النصوص الترحيبية */
 .hero-section {
-    text-align: right; /* محاذاة النص لليمين كما في الصورة */
-    padding: 30px 20px;
-}
-
-h1 {
-    font-size: 22px;
-    margin-bottom: 10px;
-}
-
-p {
-    font-size: 15px;
-    color: #555;
+    text-align: right;
+    padding: 40px 20px;
 }
 
 
