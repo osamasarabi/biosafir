@@ -78,7 +78,30 @@ header {
 }
 
 
+/* ميزة الوضع الداكن التلقائي */
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: #121212 !important; /* خلفية سوداء */
+        color: #ffffff !important;           /* نصوص بيضاء */
+    }
 
+    header {
+        background-color: #1a1a1a !important; /* هيدر رمادي غامق */
+        border-bottom: 1px solid #333 !important;
+    }
+
+    .logo-text {
+        color: #ffffff !important; /* اسم SAFIR بالأبيض */
+    }
+
+    p {
+        color: #bbbbbb !important; /* نصوص وصفية رمادية فاتحة */
+    }
+    
+    h1 {
+        color: #ffffff !important;
+    }
+}
 
 
 
