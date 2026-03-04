@@ -5,6 +5,16 @@ body {
     margin: 0;
     padding: 0;
     direction: rtl; /* اتجاه الصفحة العام */
+    
+    
+    /* تثبيت الهيدر عند التمرير */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    
+    /* حذف الخط الرقيق الفاصل */
+    border-bottom: none !important; 
+}
 }
 
 /* تنسيق الهيدر: السلة أقصى اليمين والشعار أقصى اليسار */
