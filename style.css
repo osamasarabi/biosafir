@@ -94,13 +94,12 @@ header {
 /* ميزة الوضع الداكن التلقائي */
 @media (prefers-color-scheme: dark) {
     body {
-        background-color: #121212 !important; /* خلفية سوداء */
-        color: #ffffff !important;           /* نصوص بيضاء */
+       background-color: #0b0b0b !important;
     }
 
     header {
-        background-color: #1a1a1a !important; /* هيدر رمادي غامق */
-        border-bottom: 1px solid #333 !important;
+        background-color: #0b0b0b !important; /* توحيد لون الهيدر مع خلفية الجسم في الوضع الداكن */
+        border-bottom: none !important; /* التأكد من حذف الخط في الوضع الداكن */
     }
 
     .logo-text {
