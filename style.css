@@ -79,6 +79,44 @@ header {
 
 
 
+/* تنسيق الفوتر الثابت */
+.main-footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #ffe6e6; /* اللون الذي طلبته */
+    padding: 15px 0;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.05); /* ظل خفيف جداً من الأعلى */
+    z-index: 2000;
+}
+
+/* توزيع الكلمات بمسافات متساوية */
+.footer-nav {
+    display: flex;
+    justify-content: space-around; /* توزيع متساوي للمسافات */
+    align-items: center;
+    max-width: 600px; /* لضمان عدم تباعد الكلمات بشكل مفرط في الشاشات الكبيرة */
+    margin: 0 auto;
+}
+
+/* تنسيق روابط الكلمات */
+.footer-link {
+    text-decoration: none;
+    color: #4f7033; /* لون أخضر غامق ليتناسب مع هوية BIO */
+    font-size: 14px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.footer-link:hover {
+    color: #94c173; /* يتغير اللون عند اللمس */
+}
+
+/* إضافة مسافة في أسفل الصفحة لكي لا يغطي الفوتر المحتوى */
+body {
+    padding-bottom: 70px;
+}
 
 
     
