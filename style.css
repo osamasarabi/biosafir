@@ -8,18 +8,32 @@ body {
     -webkit-font-smoothing: antialiased; /* لجعل الخط أنعم على الشاشات */
 }
 
-/* لتأكيد تطبيق الخط على كلمات الفوتر أيضاً لتبدو Bold واحترافية */
+
+
+
+/* تخصيص خط Tajawal للفوتر فقط */
 .footer-link {
-    font-family: 'Tajawal', sans-serif !important;
-    font-weight: 700; /* هذا هو الوزن العريض Bold للخط الجديد */
-    font-size: 15px;
+    text-decoration: none;
+    color: #4f7033;
+    
+    /* تطبيق الخط الجديد هنا فقط */
+    font-family: 'Tajawal', sans-serif !important; 
+    
+    font-weight: 700; /* لجعل الخط عريضاً (Bold) كما طلبت */
+    font-size: 16px;
+    transition: 0.3s;
+    display: block;
 }
 
-/* تحديث خط العناوين ليكون متناسقاً */
-h1, .logo-text {
-    font-family: 'Tajawal', sans-serif;
-    font-weight: 700;
+/* لضمان توزيع المسافات بشكل احترافي مع الخط الجديد */
+.footer-nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    max-width: 500px;
+    margin: 0 auto;
 }
+
 
 
 
