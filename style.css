@@ -1,11 +1,31 @@
-/* الإعدادات الأساسية */
 body {
-    background-color: #ffe6e6;
-    font-family: 'Arial', sans-serif;
+    background-color: #ffffff;
+    /* الخط الجديد مع خطوط احتياطية */
+    font-family: 'Tajawal', sans-serif; 
     margin: 0;
     padding: 0;
-    direction: rtl; /* اتجاه الصفحة العام */
+    direction: rtl;
+    -webkit-font-smoothing: antialiased; /* لجعل الخط أنعم على الشاشات */
 }
+
+/* لتأكيد تطبيق الخط على كلمات الفوتر أيضاً لتبدو Bold واحترافية */
+.footer-link {
+    font-family: 'Tajawal', sans-serif !important;
+    font-weight: 700; /* هذا هو الوزن العريض Bold للخط الجديد */
+    font-size: 15px;
+}
+
+/* تحديث خط العناوين ليكون متناسقاً */
+h1, .logo-text {
+    font-family: 'Tajawal', sans-serif;
+    font-weight: 700;
+}
+
+
+
+
+
+
 
 /* تنسيق الهيدر: السلة أقصى اليمين والشعار أقصى اليسار */
 header {
