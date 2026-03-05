@@ -100,18 +100,30 @@ header {
     margin: 0 auto;
 }
 
-/* تنسيق روابط الكلمات */
-/* تنسيق روابط الكلمات لتطابق خط الشعار */
+/* تنسيق روابط الفوتر لتكون الأيقونة فوق النص */
 .footer-link {
     text-decoration: none;
-    color: #4f7033;             /* اللون الأخضر الغامق */
-    font-family: 'Arial', sans-serif; /* نفس الخط المستخدم في الشعار */
-    font-size: 15px;            /* حجم خط واضح ومناسب */
-    font-weight: bold;          /* جعل الخط عريضاً (Bold) */
-    transition: 0.3s;
-    letter-spacing: 0.5px;      /* إضافة مسافة بسيطة بين الحروف لتبدو احترافية */
-    text-transform: uppercase;   /* لجعل الخط يبدو قوياً مثل SAFIR */
+    color: #4f7033; /* نفس اللون الأخضر الغامق */
+    display: flex;
+    flex-direction: column; /* لوضع الأيقونة فوق الكلمة */
+    align-items: center;
+    gap: 5px; /* مسافة بسيطة بين الأيقونة والنص */
+    font-family: 'Arial', sans-serif;
+    font-weight: bold; /* خط عريض مثل الشعار */
+    font-size: 12px;
 }
+
+/* تنسيق الأيقونات لتكون احترافية */
+.footer-link i {
+    font-size: 20px; /* حجم الأيقونة */
+    transition: 0.3s;
+}
+
+/* تأثير عند تمرير الماوس أو الضغط */
+.footer-link:hover {
+    color: #94c173; /* يتغير لون الأيقونة والنص معاً للأخضر الفاتح */
+}
+
 
 
 .footer-link:hover {
