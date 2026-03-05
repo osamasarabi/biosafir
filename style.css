@@ -79,61 +79,51 @@ header {
 
 
 
-/* تنسيق الفوتر الثابت */
+
+
+
+
+/* تنسيق الفوتر الثابت باللون الوردي الفاتح */
 .main-footer {
     position: fixed;
     bottom: 0;
     left: 0;
     width: 100%;
-    background-color: #ffe6e6; /* اللون الذي طلبته */
-    padding: 15px 0;
-    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.05); /* ظل خفيف جداً من الأعلى */
+    background-color: #ffe6e6; /* اللون المطلوب */
+    padding: 18px 0; /* زيادة الطول قليلاً لتبدو الكلمات مريحة */
+    box-shadow: 0 -1px 5px rgba(0, 0, 0, 0.05);
     z-index: 2000;
 }
 
-/* توزيع الكلمات بمسافات متساوية */
+/* توزيع الكلمات بمسافات متساوية تماماً */
 .footer-nav {
     display: flex;
-    justify-content: space-around; /* توزيع متساوي للمسافات */
+    justify-content: space-around; 
     align-items: center;
-    max-width: 600px; /* لضمان عدم تباعد الكلمات بشكل مفرط في الشاشات الكبيرة */
+    max-width: 500px; /* تضييق المساحة قليلاً لتركيز الكلمات في المنتصف */
     margin: 0 auto;
 }
 
-/* تنسيق روابط الفوتر لتكون الأيقونة فوق النص */
+/* تنسيق الكلمات لتطابق خط BIO SAFIR */
 .footer-link {
     text-decoration: none;
-    color: #4f7033; /* نفس اللون الأخضر الغامق */
-    display: flex;
-    flex-direction: column; /* لوضع الأيقونة فوق الكلمة */
-    align-items: center;
-    gap: 5px; /* مسافة بسيطة بين الأيقونة والنص */
+    color: #4f7033; /* الأخضر الغامق المتناسق مع الشعار */
     font-family: 'Arial', sans-serif;
-    font-weight: bold; /* خط عريض مثل الشعار */
-    font-size: 12px;
-}
-
-/* تنسيق الأيقونات لتكون احترافية */
-.footer-link i {
-    font-size: 20px; /* حجم الأيقونة */
+    font-weight: bold; /* خط عريض Bold */
+    font-size: 16px;   /* حجم خط واضح */
     transition: 0.3s;
+    display: block;
 }
-
-/* تأثير عند تمرير الماوس أو الضغط */
-.footer-link:hover {
-    color: #94c173; /* يتغير لون الأيقونة والنص معاً للأخضر الفاتح */
-}
-
-
 
 .footer-link:hover {
-    color: #94c173; /* يتغير اللون عند اللمس */
+    color: #94c173; /* يتغير للأخضر الفاتح عند اللمس */
 }
 
-/* إضافة مسافة في أسفل الصفحة لكي لا يغطي الفوتر المحتوى */
+/* مسافة أمان في أسفل الصفحة */
 body {
-    padding-bottom: 70px;
+    padding-bottom: 60px;
 }
+
 
 
     
