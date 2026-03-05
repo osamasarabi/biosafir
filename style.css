@@ -158,17 +158,29 @@ header {
     margin: 0 auto;
 }
 
-/* تنسيق الكلمات لتطابق خط BIO SAFIR */
+
+/* تطبيق خط Markazi Text على كلمات الفوتر فقط */
 .footer-link {
     text-decoration: none;
-    color: #4f7033; /* الأخضر الغامق المتناسق مع الشعار */
-    font-family: verdana;
-    font-feature-settings: "c2sc", "smcp";
-    font-weight: bold; /* خط عريض Bold */
-    font-size: 18px;   /* حجم خط واضح */
+    color: #4f7033;
+    font-size: 20px; /* هذا الخط يظهر صغيراً قليلاً، لذا يفضل أن يكون 20px ليصبح واضحاً */
     transition: 0.3s;
     display: block;
+
+    /* إعدادات الخط الأساسية */
+    font-family: 'Markazi Text', serif;
+    font-weight: 400;
 }
+
+/* دعم الوزن المخصص 450 (للأجهزة الحديثة) */
+@supports (font-variation-settings: "wght" 450) {
+    .footer-link {
+        font-variation-settings: "wght" 450;
+        font-weight: 450;
+    }
+}
+
+
 
 .footer-link:hover {
     color: #94c173; /* يتغير للأخضر الفاتح عند اللمس */
