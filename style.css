@@ -5,16 +5,6 @@ body {
     margin: 0;
     padding: 0;
     direction: rtl; /* اتجاه الصفحة العام */
-    
-    
-    /* تثبيت الهيدر عند التمرير */
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    
-    /* حذف الخط الرقيق الفاصل */
-    border-bottom: none !important; 
-}
 }
 
 /* تنسيق الهيدر: السلة أقصى اليمين والشعار أقصى اليسار */
@@ -43,7 +33,7 @@ header {
     padding: 4px 12px;
     border-radius: 12px;
     font-weight: bold;
-    font-size: 15px;
+    font-size: 20px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -72,7 +62,7 @@ header {
     right: -10px;
     background-color: #e74c3c;
     color: white;
-    font-size: 8px;
+    font-size: 10px;
     font-weight: bold;
     width: 18px;
     height: 18px;
@@ -87,65 +77,6 @@ header {
     padding: 40px 20px;
 }
 
-
-
-
-
-/* ميزة الوضع الداكن التلقائي */
-@media (prefers-color-scheme: dark) {
-    body {
-       background-color: #0b0b0b !important;
-    }
-
-    header {
-        background-color: #0b0b0b !important; /* توحيد لون الهيدر مع خلفية الجسم في الوضع الداكن */
-        border-bottom: none !important; /* التأكد من حذف الخط في الوضع الداكن */
-    }
-
-    .logo-text {
-        color: #ffffff !important; /* اسم SAFIR بالأبيض */
-    }
-
-    p {
-        color: #bbbbbb !important; /* نصوص وصفية رمادية فاتحة */
-    }
-    
-    h1 {
-        color: #ffffff !important;
-    }
-}
-
-
-
-/* ميزة الوضع الداكن الفاخر */
-@media (prefers-color-scheme: dark) {
-    body {
-        background-color: #0b0b0b !important; /* أسود عميق */
-        color: #ffffff !important;
-    }
-
-    header {
-        background-color: #161616 !important; /* هيدر داكن */
-        border-bottom: 1px solid #2a2a2a !important;
-    }
-
-    .logo-text {
-        color: #ffffff !important; /* اسم SAFIR بالأبيض الناصع */
-    }
-
-    h1 {
-        color: #ffffff !important;
-    }
-
-    p {
-        color: #aaaaaa !important; /* وصف رمادي مريح للعين */
-    }
-
-    /* الحفاظ على ألوان الشعار المنقسم كما هي */
-    .logo-bio {
-        box-shadow: 0 0 10px rgba(148, 193, 115, 0.2); /* توهج خفيف للشعار */
-    }
-}
 
 
 
