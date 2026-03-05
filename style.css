@@ -9,7 +9,7 @@ body {
 
 /* تنسيق الهيدر: السلة أقصى اليمين والشعار أقصى اليسار */
 header {
-    background-color: #ffffff;
+    background-color: #ffe6e6;
     padding: 12px 20px;
     display: flex;
     flex-direction: row; /* جعل السلة يمين والشعار يسار */
