@@ -165,7 +165,7 @@ header {
     color: #4f7033;
     font-family: Arial, Helvetica, sans-serif; /* الخط الافتراضي العادي */
     font-weight: bold; /* جعل الكلمات غليظة وواضحة */
-    font-size: 16px;   /* حجم مناسب جداً لخط Arial */
+    font-size: 17px;   /* حجم مناسب جداً لخط Arial */
     transition: 0.3s;
     display: block;
 }
