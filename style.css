@@ -1,12 +1,33 @@
+/* توحيد خلفية الموقع بالكامل */
 body {
-    background-color: #ffffff;
-    /* الخط الجديد مع خطوط احتياطية */
-    font-family: 'Arial', sans-serif; 
+    background-color: #ffe6e6 !important; /* لون الكرش */
     margin: 0;
     padding: 0;
     direction: rtl;
-    -webkit-font-smoothing: antialiased; /* لجعل الخط أنعم على الشاشات */
 }
+
+/* توحيد لون الرأس */
+header {
+    background-color: #ffe6e6 !important; 
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: none !important; /* حذف أي خط فاصل */
+    padding: 10px 20px;
+}
+
+/* توحيد لون الذيل */
+.main-footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #ffe6e6 !important; 
+    border-top: none !important;    /* التأكد من عدم وجود خط فاصل في الأسفل */
+    padding: 18px 0;
+    z-index: 2000;
+}
+
 
 
 
