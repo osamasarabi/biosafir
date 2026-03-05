@@ -162,7 +162,7 @@ header {
 .footer-link {
     text-decoration: none;
     color: #4f7033; /* الأخضر الغامق المتناسق مع الشعار */
-    font-family: 'Arial', sans-serif;
+    font-family: Tahoma, sans-serif;
     font-weight: bold; /* خط عريض Bold */
     font-size: 16px;   /* حجم خط واضح */
     transition: 0.3s;
