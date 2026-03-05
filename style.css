@@ -101,13 +101,18 @@ header {
 }
 
 /* تنسيق روابط الكلمات */
+/* تنسيق روابط الكلمات لتطابق خط الشعار */
 .footer-link {
     text-decoration: none;
-    color: #4f7033; /* لون أخضر غامق ليتناسب مع هوية BIO */
-    font-size: 14px;
-    font-weight: bold;
+    color: #4f7033;             /* اللون الأخضر الغامق */
+    font-family: 'Arial', sans-serif; /* نفس الخط المستخدم في الشعار */
+    font-size: 15px;            /* حجم خط واضح ومناسب */
+    font-weight: bold;          /* جعل الخط عريضاً (Bold) */
     transition: 0.3s;
+    letter-spacing: 0.5px;      /* إضافة مسافة بسيطة بين الحروف لتبدو احترافية */
+    text-transform: uppercase;   /* لجعل الخط يبدو قوياً مثل SAFIR */
 }
+
 
 .footer-link:hover {
     color: #94c173; /* يتغير اللون عند اللمس */
