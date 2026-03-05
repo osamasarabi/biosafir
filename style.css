@@ -164,7 +164,7 @@ header {
     color: #4f7033; /* الأخضر الغامق المتناسق مع الشعار */
     font-family: Arial;
     font-weight: bold; /* خط عريض Bold */
-    font-size: 16px;   /* حجم خط واضح */
+    font-size: 18px;   /* حجم خط واضح */
     transition: 0.3s;
     display: block;
 }
