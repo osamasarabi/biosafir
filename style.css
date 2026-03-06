@@ -17,6 +17,33 @@ header {
     padding: 10px 20px;
 }
 
+
+
+/* تطبيق خط Cairo على منطقة main بالكامل */
+main {
+    font-family: 'Cairo', sans-serif;
+}
+
+/* تخصيص العنوان الرئيسي ليكون غليظاً جداً وواضحاً */
+main h1 {
+    font-family: 'Cairo', sans-serif;
+    font-weight: 900; /* أقصى درجة غلظة للوضوح */
+    font-size: 28px;  /* حجم مناسب للعناوين */
+    color: #000000;   /* لون أسود صريح للوضوح أو استخدم الأخضر #4f7033 */
+    margin-bottom: 15px;
+}
+
+/* تخصيص النصوص الثانوية داخل main */
+main p {
+    font-family: 'Cairo', sans-serif;
+    font-weight: 400; /* وزن عادي للنصوص الطويلة لراحة العين */
+    font-size: 18px;
+    color: #333333;
+}
+
+
+
+
 /* توحيد لون الذيل */
 .main-footer {
     position: fixed;
