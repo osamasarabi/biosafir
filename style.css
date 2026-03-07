@@ -219,20 +219,18 @@ body {
     padding-top: 20px;
 }
 
-.main-photo {
-    width: 220px;  /* عرض الصورة */
-    height: 220px; /* نفس العرض لتكون مربعة */
-    object-fit: cover; /* لضمان عدم تشوه الصورة */
-    border-radius: 20px; /* حواف ناعمة */
-    border: 3px solid #4f7033; /* إطار بلون هويتك الأخضر */
-    margin-bottom: 15px;
+
+
+.main-img {
+    width: 280px;      /* عرض الصورة */
+    height: 280px;     /* نفس العرض لجعلها مربعة تماماً */
+    object-fit: cover; /* لقص أطراف الصورة الزائدة والحفاظ على جودتها */
+    border-radius: 20px; /* حواف منحنية لتناسب التصميم */
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1); /* ظل لإعطاء عمق */
+    margin-bottom: 20px;
 }
 
-/* تطبيق خط Cairo الذي اخترته للعناوين */
-h1 {
-    font-family: 'Cairo', sans-serif;
-    font-weight: 900;
-}
+
 
     
 
