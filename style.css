@@ -25,7 +25,7 @@ main {
 }
 
 /* تخصيص العنوان الرئيسي ليكون غليظاً جداً وواضحاً */
-main h1 {
+main h3 {
     font-family: 'Cairo', sans-serif;
     font-weight: 900; /* أقصى درجة غلظة للوضوح */
     font-size: 28px;  /* حجم مناسب للعناوين */
@@ -37,7 +37,7 @@ main h1 {
 main p {
     font-family: 'Cairo', sans-serif;
     font-weight: 400; /* وزن عادي للنصوص الطويلة لراحة العين */
-    font-size: 18px;
+    font-size: 15px;
     color: #333333;
 }
 
