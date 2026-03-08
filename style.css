@@ -25,7 +25,7 @@ main {
 }
 
 /* تخصيص العنوان الرئيسي ليكون غليظاً جداً وواضحاً */
-main h3 {
+main h1 {
     font-family: 'Cairo', sans-serif;
     font-weight: 900; /* أقصى درجة غلظة للوضوح */
     font-size: 28px;  /* حجم مناسب للعناوين */
@@ -233,4 +233,25 @@ body {
 
 
     
+
+
+
+
+/* حاوية الصور الثلاث */
+.triple-images-container {
+    display: flex;            /* وضع الصور بجانب بعضها */
+    justify-content: center;   /* تجميعها في الوسط */
+    gap: 10px;                /* مسافة صغيرة بين الصور */
+    padding: 10px 20px;       /* مسافة من الأطراف */
+    margin-bottom: 20px;      /* مسافة قبل كلمة متجر سفير بيو */
+}
+
+/* تنسيق الصور الفردية */
+.triple-images-container img {
+    width: 30%;               /* توزيع المساحة بالتساوي */
+    aspect-ratio: 1 / 1;      /* جعلها مربعة تماماً مهما كان أصلها */
+    object-fit: cover;        /* منع تمدد الصورة المحرج */
+    border-radius: 12px;      /* حواف ناعمة تشبه الصورة الكبيرة */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05); /* ظل خفيف جداً */
+}
 
