@@ -255,3 +255,30 @@ body {
     box-shadow: 0 4px 8px rgba(0,0,0,0.05); /* ظل خفيف جداً */
 }
 
+
+
+
+
+.slider-container {
+    position: relative;
+    width: 280px;      /* نفس مقاس صورتك الحالية */
+    height: 280px;
+    margin: 0 auto 20px;
+}
+
+.slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 25px;
+    opacity: 0;         /* إخفاء الصور */
+    transition: opacity 1s ease-in-out; /* تأثير التلاشي */
+}
+
+.slide.active {
+    opacity: 1;         /* إظهار الصورة النشطة فقط */
+}
+
