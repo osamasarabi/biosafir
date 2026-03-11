@@ -260,11 +260,14 @@ body {
 
 
 .slider-container {
+    margin-top: 40px;   /* هذه القيمة هي التي ستنزل الصور لأسفل */
     position: relative;
-    width: 280px;      /* نفس مقاس صورتك الحالية */
-    height: 280px;
-    margin: 0 auto 20px;
+    width: 300px;
+    height: 300px;
+    margin-left: auto;
+    margin-right: auto;
 }
+
 
 .slide {
     position: absolute;
