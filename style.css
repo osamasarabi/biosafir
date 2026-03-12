@@ -36,13 +36,27 @@ main h1 {
 
 /* تخصيص النصوص الثانوية داخل main */
 main p {
-    text-align: right;
-    font-family: 'Cairo', sans-serif;
-    font-weight: 400; /* وزن عادي للنصوص الطويلة لراحة العين */
-    font-size: 15px;
-    color: #333333;
-    padding: 25px;
+    .text-align: right;
+    .font-family: 'Cairo', sans-serif;
+    .font-weight: 400; /* وزن عادي للنصوص الطويلة لراحة العين */
+    .font-size: 15px;
+    .color: #333333;
+    .padding: 25px;
 }
+
+
+
+/* تنسيق النص ليكون في جهة اليمين */
+.product-title {
+    text-align: right;    /* محاذاة النص لليمين */
+    width: 300px;         /* نفس عرض الصور ليكون تحتها تماماً */
+    margin: 0 auto;       /* ليبقى الصندوق نفسه في المنتصف لكن النص بداخله لليمين */
+    font-family: 'Cairo', sans-serif;
+    font-size: 18px;
+    color: #333;          /* لون متناسق مع الجلود */
+    padding-top: 10px;    /* مسافة بسيطة بين الصورة والنص */
+}
+
 
 
 
