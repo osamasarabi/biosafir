@@ -11,3 +11,14 @@ function showNextSlide() {
 
 // التبديل كل 5 ثوانٍ
 setInterval(showNextSlide, 5000);
+
+
+
+
+
+
+function addToCart() {
+    alert("تم إضافة المنتج إلى السلة بنجاح!");
+}
+
+
