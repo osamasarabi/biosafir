@@ -302,3 +302,61 @@ body {
     opacity: 1;         /* إظهار الصورة النشطة فقط */
 }
 
+
+
+
+
+
+/* تنسيق شبكة المنتجات */
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 أعمدة متساوية */
+    gap: 15px; /* مسافة بين المنتجات */
+    padding: 20px;
+    max-width: 350px; /* لتبقى متناسقة مع عرض الصور الكبيرة فوقها */
+    margin: 0 auto;
+}
+
+/* تنسيق بطاقة المنتج الفردية */
+.product-card {
+    background: #fff;
+    border-radius: 10px;
+    padding: 10px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.product-card img {
+    width: 100%;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.product-card h3 {
+    font-size: 14px;
+    margin: 5px 0;
+}
+
+.product-card p {
+    font-size: 12px;
+    color: #888;
+}
+
+/* تنسيق زر الإضافة للسلة */
+.add-to-cart {
+    background-color: #5d7c5d; /* لون أخضر متناسق مع شعارك */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    font-size: 10px;
+    cursor: pointer;
+    width: 100%;
+    transition: 0.3s;
+}
+
+.add-to-cart:hover {
+    background-color: #4a634a;
+}
+
