@@ -306,31 +306,5 @@ body {
 
 
 
-/* تنسيق المنتجات بشكل عمودي */
-.products-grid {
-    display: flex;
-    flex-direction: column; /* ترتيب العناصر تحت بعضها */
-    align-items: center;    /* توسيط المنتجات في نصف الشاشة */
-    gap: 20px;              /* مسافة بين كل منتج والآخر */
-    padding: 20px;
-    width: 100%;
-}
-
-/* تنسيق بطاقة المنتج لتناسب العرض العمودي */
-.product-card {
-    background: #fff;
-    border-radius: 15px;
-    padding: 15px;
-    text-align: center;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-    width: 280px;           /* عرض مناسب ليشبه عرض الصورة الكبيرة */
-}
-
-.product-card img {
-    width: 100%;            /* الصورة تأخذ عرض البطاقة كاملاً */
-    aspect-ratio: 1/1;
-    object-fit: cover;
-    border-radius: 10px;
-}
 
 
