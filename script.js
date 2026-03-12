@@ -17,8 +17,5 @@ setInterval(showNextSlide, 5000);
 
 
 
-function addToCart() {
-    alert("تم إضافة المنتج إلى السلة بنجاح!");
-}
 
 
