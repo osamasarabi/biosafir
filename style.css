@@ -1,350 +1,96 @@
-/* توحيد خلفية الموقع بالكامل */
+/* إعدادات عامة */
 body {
-    background-color: #ffe6e6 !important; /* لون الكرش */
+    direction: rtl; /* لضبط الاتجاه العربي */
     margin: 0;
     padding: 0;
-    direction: rtl;
-    font-family: 'Arial', sans-serif;
-}
-
-/* توحيد لون الرأس */
-header {
-    background-color: #ffe6e6 !important; 
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    border-bottom: none !important; /* حذف أي خط فاصل */
-    padding: 10px 20px;
-}
-
-
-
-/* تطبيق خط Cairo على منطقة main بالكامل */
-main {
     font-family: 'Cairo', sans-serif;
+    background-color: #fdf2f2; /* نفس لون الخلفية في صورك */
 }
 
-/* تخصيص العنوان الرئيسي ليكون غليظاً جداً وواضحاً */
-main h1 {
-    text-align: center;
-    font-family: 'Cairo', sans-serif;
-    font-weight: 900; /* أقصى درجة غلظة للوضوح */
-    font-size: 28px;  /* حجم مناسب للعناوين */
-    color: #000000;   /* لون أسود صريح للوضوح أو استخدم الأخضر #4f7033 */
-    margin-bottom: 15px;
+/* حاوية المعرض (الصور المتحركة) */
+.slider-container {
+    position: relative;
+    width: 90%;
+    max-width: 350px;
+    aspect-ratio: 1/1;
+    margin: 100px auto 20px auto; /* مسافة كبيرة من الأعلى عن الشعار */
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
 }
 
-/* تخصيص النصوص الثانوية داخل main */
-main p {
-    .text-align: right;
-    .font-family: 'Cairo', sans-serif;
-    .font-weight: 400; /* وزن عادي للنصوص الطويلة لراحة العين */
-    .font-size: 15px;
-    .color: #333333;
-    .padding: 25px;
-}
-
-
-
-/* تنسيق النص ليكون في جهة اليمين */
-.product-title {
-    text-align: right;    /* محاذاة النص لليمين */
-    width: 300px;         /* نفس عرض الصور ليكون تحتها تماماً */
-    margin: 0 auto;       /* ليبقى الصندوق نفسه في المنتصف لكن النص بداخله لليمين */
-    font-family: 'Cairo', sans-serif;
-    font-size: 18px;
-    color: #333;          /* لون متناسق مع الجلود */
-    padding-top: 10px;    /* مسافة بسيطة بين الصورة والنص */
-}
-
-
-
-
-
-/* توحيد لون الذيل */
-.main-footer {
-    position: fixed;
-    bottom: 0;
-    left: 0;
+.slide {
+    position: absolute;
     width: 100%;
-    background-color: #ffe6e6 !important; 
-    border-top: none !important;    /* التأكد من عدم وجود خط فاصل في الأسفل */
-    padding: 18px 0;
-    z-index: 2000;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    object-fit: cover;
 }
 
-
-
-
-
-.footer-link {
-    text-decoration: none;
-    color: #4f7033;
-    /* حذف Tajawal والعودة للخط العادي */
-    font-family: 'Impact', sans-serif; 
-    font-weight: bold;
-    font-size: 16px;
-    transition: 0.3s;
-    display: block;
+.slide.active {
+    opacity: 1;
 }
 
-
-/* لضمان توزيع المسافات بشكل احترافي مع الخط الجديد */
-.footer-nav {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    max-width: 500px;
-    margin: 0 auto;
-}
-
-
-
-
-
-
-
-
-/* تنسيق الهيدر: السلة أقصى اليمين والشعار أقصى اليسار */
-header {
-    background-color: #ffe6e6;
-    padding: 12px 20px;
-    display: flex;
-    flex-direction: row; /* جعل السلة يمين والشعار يسار */
-    justify-content: space-between;
-    align-items: center;
-    border-bottom: 1px solid #f0f0f0;
-}
-
-/* حاوية الشعار: تترتب من اليسار لليمن */
-.logo-container {
-    display: flex;
-    flex-direction: row-reverse; /* عكس الترتيب ليصبح BIO يسار و SAFIR يمينها */
-    align-items: center;
-    gap: 10px;
-}
-
-/* تصميم الشعار المنقسم (فاتح فوق وغامق تحت) */
-.logo-bio {
-    background: linear-gradient(to bottom, #94c173 50%, #4f7033 50%); 
-    color: white;
-    padding: 4px 12px;
-    border-radius: 12px;
-    font-weight: bold;
-    font-size: 15px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.logo-text {
-    font-size: 20px;
+/* تنسيق عنوان "محفظة الجيب" */
+.product-category-title {
+    width: 90%;
+    max-width: 350px;
+    margin: 10px auto;
+    text-align: right; /* محاذاة لليمين */
+    font-size: 1.2rem;
     font-weight: bold;
     color: #333;
 }
 
-/* السلة في أقصى اليمين */
-.cart-icon-container {
-    position: relative;
-    display: flex;
-    align-items: center;
-}
-
-.cart-icon-container svg {
-    stroke: #76a04d;
-}
-
-.cart-badge {
-    position: absolute;
-    top: -5px;
-    right: -12px;
-    background-color: #e74c3c;
-    color: white;
-    font-size: 12px;
-    font-weight: bold;
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.hero-section {
-    text-align: center;
-    padding: 40px 20px;
-}
-
-
-
-
-
-
-
-/* تنسيق الفوتر الثابت باللون الوردي الفاتح */
-.main-footer {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    background-color: #ffe6e6; /* اللون المطلوب */
-    padding: 18px 0; /* زيادة الطول قليلاً لتبدو الكلمات مريحة */
-    box-shadow: 0 -1px 5px rgba(0, 0, 0, 0.05);
-    z-index: 2000;
-}
-
-/* توزيع الكلمات بمسافات متساوية تماماً */
-.footer-nav {
-    display: flex;
-    justify-content: space-around; 
-    align-items: center;
-    max-width: 500px; /* تضييق المساحة قليلاً لتركيز الكلمات في المنتصف */
-    margin: 0 auto;
-}
-
-
-/* العودة لخط Arial في الفوتر */
-.footer-link {
-    text-decoration: none;
-    color: #4f7033;
-    font-family: 'Cairo', sans-serif;
-    font-weight: 700; /* للعناوين الواضحة */
-    font-size: 17px;   /* حجم مناسب جداً لخط Arial */
-    transition: 0.3s;
-    display: block;
-}
-
-/* حذف أي كود @supports متعلق بخط مركزي إذا كان موجوداً */
-
-
-
-
-.footer-link:hover {
-    color: #94c173; /* يتغير للأخضر الفاتح عند اللمس */
-}
-
-/* مسافة أمان في أسفل الصفحة */
-body {
-    padding-bottom: 60px;
-}
-
-
-
-
-.hero-section {
-    text-align: center;
-    padding-top: 20px;
-}
-
-
-
-.main-img {
-    width: 280px;      /* عرض الصورة */
-    height: 280px;     /* نفس العرض لجعلها مربعة تماماً */
-    object-fit: cover; /* لقص أطراف الصورة الزائدة والحفاظ على جودتها */
-    border-radius: 20px; /* حواف منحنية لتناسب التصميم */
-    box-shadow: 0 8px 20px rgba(0,0,0,0.1); /* ظل لإعطاء عمق */
-    margin-bottom: 20px;
-}
-
-
-
-    
-
-
-
-
-/* حاوية الصور الثلاث */
-.triple-images-container {
-    display: flex;            /* وضع الصور بجانب بعضها */
-    justify-content: center;   /* تجميعها في الوسط */
-    gap: 10px;                /* مسافة صغيرة بين الصور */
-    padding: 10px 20px;       /* مسافة من الأطراف */
-    margin-bottom: 20px;      /* مسافة قبل كلمة متجر سفير بيو */
-}
-
-/* تنسيق الصور الفردية */
-.triple-images-container img {
-    width: 30%;               /* توزيع المساحة بالتساوي */
-    aspect-ratio: 1 / 1;      /* جعلها مربعة تماماً مهما كان أصلها */
-    object-fit: cover;        /* منع تمدد الصورة المحرج */
-    border-radius: 12px;      /* حواف ناعمة تشبه الصورة الكبيرة */
-    box-shadow: 0 4px 8px rgba(0,0,0,0.05); /* ظل خفيف جداً */
-}
-
-
-
-
-
-.slider-container {
-    margin-top: 40px;   /* هذه القيمة هي التي ستنزل الصور لأسفل */
-    position: relative;
-    width: 300px;
-    height: 300px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-
-.slide {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 25px;
-    opacity: 0;         /* إخفاء الصور */
-    transition: opacity 1s ease-in-out; /* تأثير التلاشي */
-}
-
-.slide.active {
-    opacity: 1;         /* إظهار الصورة النشطة فقط */
-}
-
-
-
-
-
-/* تنسيق المنتجات في عمودين متساويين */
+/* شبكة المنتجات (عمودين) */
 .products-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* إنشاء عمودين بنسبة متساوية */
-    gap: 15px;                             /* المسافة بين المنتجات */
-    padding: 15px;
-    max-width: 100%;                       /* استغلال عرض الشاشة بالكامل */
+    grid-template-columns: repeat(2, 1fr); /* عمودين */
+    gap: 15px;
+    width: 95%;
+    max-width: 400px;
+    margin: 20px auto;
 }
 
-/* تنسيق بطاقة المنتج لتناسب العمودين */
+/* بطاقة المنتج */
 .product-card {
     background: #fff;
     border-radius: 15px;
     padding: 10px;
     text-align: center;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
 }
 
 .product-card img {
     width: 100%;
-    aspect-ratio: 1/1;       /* جعل الصور مربعة ومنظمة */
+    aspect-ratio: 1/1;
     object-fit: cover;
     border-radius: 10px;
 }
 
-/* تنسيق النصوص والأسعار */
 .product-card h3 {
-    font-size: 14px;
-    margin: 8px 0;
-    color: #333;
+    font-size: 0.9rem;
+    margin: 10px 0 5px;
 }
 
 .product-card p {
+    color: #5d7c5d;
     font-weight: bold;
-    color: #5d7c5d;         /* لون أخضر متناسق مع شعارك */
     margin-bottom: 10px;
 }
+
+/* زر السلة */
+.add-to-cart {
+    background: #5d7c5d;
+    color: white;
+    border: none;
+    padding: 8px;
+    border-radius: 8px;
+    width: 100%;
+    cursor: pointer;
+    font-size: 0.8rem;
+}
+
 
 
