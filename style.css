@@ -36,7 +36,7 @@ main h1 {
 
 /* تخصيص النصوص الثانوية داخل main */
 main p {
-    text-align: center;
+    text-align: right;
     font-family: 'Cairo', sans-serif;
     font-weight: 400; /* وزن عادي للنصوص الطويلة لراحة العين */
     font-size: 15px;
