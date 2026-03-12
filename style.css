@@ -306,5 +306,45 @@ body {
 
 
 
+/* تنسيق المنتجات في عمودين متساويين */
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* إنشاء عمودين بنسبة متساوية */
+    gap: 15px;                             /* المسافة بين المنتجات */
+    padding: 15px;
+    max-width: 100%;                       /* استغلال عرض الشاشة بالكامل */
+}
+
+/* تنسيق بطاقة المنتج لتناسب العمودين */
+.product-card {
+    background: #fff;
+    border-radius: 15px;
+    padding: 10px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.product-card img {
+    width: 100%;
+    aspect-ratio: 1/1;       /* جعل الصور مربعة ومنظمة */
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* تنسيق النصوص والأسعار */
+.product-card h3 {
+    font-size: 14px;
+    margin: 8px 0;
+    color: #333;
+}
+
+.product-card p {
+    font-weight: bold;
+    color: #5d7c5d;         /* لون أخضر متناسق مع شعارك */
+    margin-bottom: 10px;
+}
 
 
