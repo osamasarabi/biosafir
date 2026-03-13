@@ -1,32 +1,46 @@
-/* إعدادات عامة */
+/* إعدادات الخط والصفحة */
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap');
+
 body {
     margin: 0;
     font-family: 'Cairo', sans-serif;
     background-color: #fdf2f2;
-    padding-bottom: 80px; /* مساحة للـ Footer */
+    direction: rtl;
+    padding-bottom: 80px; /* مساحة لكي لا يغطي الذيل على المنتجات */
 }
 
+/* الرأس - Header */
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 15px 20px;
-    background: transparent;
+    background-color: #fdf2f2;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo-area {
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
 
 .bio-tag {
     background: #5d7c5d;
     color: white;
-    padding: 2px 10px;
-    border-radius: 15px;
-    font-size: 14px;
+    padding: 2px 12px;
+    border-radius: 12px;
     font-weight: bold;
+    font-size: 14px;
 }
 
 .brand-name {
     font-size: 20px;
     font-weight: bold;
-    margin-right: 10px;
+    color: #333;
+    letter-spacing: 1px;
 }
 
 .cart-icon {
@@ -36,40 +50,45 @@ header {
 .cart-count {
     position: absolute;
     top: -5px;
-    right: -5px;
+    left: -5px; /* لأن الاتجاه RTL */
     background: #c66;
     color: white;
     font-size: 10px;
-    padding: 2px 5px;
+    padding: 2px 6px;
     border-radius: 50%;
 }
 
 /* قسم الترحيب */
 .welcome-section {
     text-align: center;
-    padding: 40px 20px;
+    padding: 30px 20px;
 }
 
 .welcome-section h1 {
-    font-size: 24px;
-    margin-bottom: 10px;
+    font-size: 22px;
+    margin: 0;
 }
 
-/* شبكة المنتجات (عمودين) */
+.welcome-section p {
+    font-size: 14px;
+    color: #666;
+}
+
+/* شبكة المنتجات (9 منتجات - عمودين) */
 .products-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* عرض منتجين في كل صف */
+    grid-template-columns: repeat(2, 1fr);
     gap: 15px;
-    padding: 15px;
+    padding: 0 15px;
 }
 
 .product-card {
     background: white;
-    border-radius: 20px;
+    border-radius: 18px;
     overflow: hidden;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-    transition: transform 0.2s;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.03);
     cursor: pointer;
+    border: 1px solid rgba(0,0,0,0.05);
 }
 
 .product-image img {
@@ -79,34 +98,35 @@ header {
 }
 
 .product-info {
-    padding: 12px;
+    padding: 10px;
     text-align: center;
 }
 
 .product-info h3 {
-    font-size: 14px;
+    font-size: 13px;
     margin: 5px 0;
-    color: #333;
+    color: #444;
 }
 
 .price {
     color: #5d7c5d;
     font-weight: bold;
-    font-size: 16px;
-    margin-bottom: 10px;
+    font-size: 15px;
+    margin: 5px 0;
 }
 
-.add-btn {
+.view-btn {
     background: #5d7c5d;
     color: white;
     border: none;
-    padding: 8px 15px;
-    border-radius: 10px;
+    padding: 7px;
+    border-radius: 8px;
     width: 100%;
     font-size: 12px;
+    font-family: 'Cairo', sans-serif;
 }
 
-/* القائمة السفلية */
+/* الذيل - Bottom Nav */
 .bottom-nav {
     position: fixed;
     bottom: 0;
@@ -114,20 +134,22 @@ header {
     background: white;
     display: flex;
     justify-content: space-around;
-    padding: 15px 0;
-    box-shadow: 0 -2px 10px rgba(0,0,0,0.05);
+    padding: 12px 0;
+    box-shadow: 0 -3px 10px rgba(0,0,0,0.05);
+    z-index: 1000;
 }
 
 .bottom-nav a {
     text-decoration: none;
     color: #888;
-    font-size: 14px;
+    font-size: 13px;
+    font-weight: bold;
 }
 
 .bottom-nav a.active {
     color: #5d7c5d;
-    font-weight: bold;
 }
+
 
 
 
