@@ -1,16 +1,17 @@
-let currentSlide = 0;
-const slides = document.querySelectorAll('.slide');
-
-function showNextSlide() {
-    if (slides.length > 0) {
-        slides[currentSlide].classList.remove('active');
-        currentSlide = (currentSlide + 1) % slides.length;
-        slides[currentSlide].classList.add('active');
-    }
+function openProductPage(productId) {
+    // سيتم توجيه المستخدم لصفحة المنتج مع رقم تعريفي
+    // حالياً سنقوم بفتح تنبيه، ويمكنك لاحقاً إنشاء صفحة product.html
+    window.location.href = `product.html?id=${productId}`;
 }
 
-// التبديل كل 5 ثوانٍ
-setInterval(showNextSlide, 5000);
+// كود بسيط لزيادة رقم السلة (تجريبي)
+document.querySelectorAll('.add-btn').forEach(button => {
+    button.addEventListener('click', (e) => {
+        e.stopPropagation(); // لمنع فتح صفحة المنتج عند الضغط على الزر فقط
+        alert("تمت إضافة المنتج إلى السلة!");
+    });
+});
+
 
 
 
