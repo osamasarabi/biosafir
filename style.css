@@ -1,3 +1,4 @@
+/* توحيد خلفية الموقع بالكامل */
 body {
     background-color: #ffe6e6 !important; /* لون الكرش */
     margin: 0;
@@ -6,7 +7,7 @@ body {
     font-family: 'Arial', sans-serif;
 }
 
-‎/* توحيد لون الرأس */
+/* توحيد لون الرأس */
 header {
     background-color: #ffe6e6 !important; 
     position: sticky;
@@ -16,51 +17,7 @@ header {
     padding: 10px 20px;
 }
 
-
-
-‎/* تطبيق خط Cairo على منطقة main بالكامل */
-main {
-    font-family: 'Cairo', sans-serif;
-}
-
-‎/* تخصيص العنوان الرئيسي ليكون غليظاً جداً وواضحاً */
-main h1 {
-    text-align: center;
-    font-family: 'Cairo', sans-serif;
-    font-weight: 900; /* أقصى درجة غلظة للوضوح */
-    font-size: 28px;  /* حجم مناسب للعناوين */
-    color: #000000;   /* لون أسود صريح للوضوح أو استخدم الأخضر #4f7033 */
-    margin-bottom: 15px;
-}
-
-‎/* تخصيص النصوص الثانوية داخل main */
-main p {
-    .text-align: right;
-    .font-family: 'Cairo', sans-serif;
-    .font-weight: 400; /* وزن عادي للنصوص الطويلة لراحة العين */
-    .font-size: 15px;
-    .color: #333333;
-    .padding: 25px;
-}
-
-
-
-‎/* تنسيق النص ليكون في جهة اليمين */
-.product-title {
-    text-align: right;    /* محاذاة النص لليمين */
-    width: 300px;         /* نفس عرض الصور ليكون تحتها تماماً */
-    margin: 0 auto;       /* ليبقى الصندوق نفسه في المنتصف لكن النص بداخله لليمين */
-    font-family: 'Cairo', sans-serif;
-    font-size: 18px;
-    color: #333;          /* لون متناسق مع الجلود */
-    padding-top: 10px;    /* مسافة بسيطة بين الصورة والنص */
-}
-
-
-
-
-
-‎/* توحيد لون الذيل */
+/* توحيد لون الذيل */
 .main-footer {
     position: fixed;
     bottom: 0;
@@ -79,7 +36,7 @@ main p {
 .footer-link {
     text-decoration: none;
     color: #4f7033;
-‎    /* حذف Tajawal والعودة للخط العادي */
+    /* حذف Tajawal والعودة للخط العادي */
     font-family: 'Impact', sans-serif; 
     font-weight: bold;
     font-size: 16px;
@@ -88,7 +45,7 @@ main p {
 }
 
 
-‎/* لضمان توزيع المسافات بشكل احترافي مع الخط الجديد */
+/* لضمان توزيع المسافات بشكل احترافي مع الخط الجديد */
 .footer-nav {
     display: flex;
     justify-content: space-around;
@@ -104,7 +61,7 @@ main p {
 
 
 
-‎/* تنسيق الهيدر: السلة أقصى اليمين والشعار أقصى اليسار */
+/* تنسيق الهيدر: السلة أقصى اليمين والشعار أقصى اليسار */
 header {
     background-color: #ffe6e6;
     padding: 12px 20px;
@@ -115,7 +72,7 @@ header {
     border-bottom: 1px solid #f0f0f0;
 }
 
-‎/* حاوية الشعار: تترتب من اليسار لليمن */
+/* حاوية الشعار: تترتب من اليسار لليمن */
 .logo-container {
     display: flex;
     flex-direction: row-reverse; /* عكس الترتيب ليصبح BIO يسار و SAFIR يمينها */
@@ -123,7 +80,7 @@ header {
     gap: 10px;
 }
 
-‎/* تصميم الشعار المنقسم (فاتح فوق وغامق تحت) */
+/* تصميم الشعار المنقسم (فاتح فوق وغامق تحت) */
 .logo-bio {
     background: linear-gradient(to bottom, #94c173 50%, #4f7033 50%); 
     color: white;
@@ -142,7 +99,7 @@ header {
     color: #333;
 }
 
-‎/* السلة في أقصى اليمين */
+/* السلة في أقصى اليمين */
 .cart-icon-container {
     position: relative;
     display: flex;
@@ -180,7 +137,7 @@ header {
 
 
 
-‎/* تنسيق الفوتر الثابت باللون الوردي الفاتح */
+/* تنسيق الفوتر الثابت باللون الوردي الفاتح */
 .main-footer {
     position: fixed;
     bottom: 0;
@@ -192,7 +149,7 @@ header {
     z-index: 2000;
 }
 
-‎/* توزيع الكلمات بمسافات متساوية تماماً */
+/* توزيع الكلمات بمسافات متساوية تماماً */
 .footer-nav {
     display: flex;
     justify-content: space-around; 
@@ -202,18 +159,18 @@ header {
 }
 
 
-‎/* العودة لخط Arial في الفوتر */
+/* العودة لخط Arial في الفوتر */
 .footer-link {
     text-decoration: none;
     color: #4f7033;
-    font-family: 'Cairo', sans-serif;
-    font-weight: 700; /* للعناوين الواضحة */
+    font-family: Arial, Helvetica, sans-serif; /* الخط الافتراضي العادي */
+    font-weight: bold; /* جعل الكلمات غليظة وواضحة */
     font-size: 17px;   /* حجم مناسب جداً لخط Arial */
     transition: 0.3s;
     display: block;
 }
 
-‎/* حذف أي كود @supports متعلق بخط مركزي إذا كان موجوداً */
+/* حذف أي كود @supports متعلق بخط مركزي إذا كان موجوداً */
 
 
 
@@ -222,83 +179,9 @@ header {
     color: #94c173; /* يتغير للأخضر الفاتح عند اللمس */
 }
 
-‎/* مسافة أمان في أسفل الصفحة */
+/* مسافة أمان في أسفل الصفحة */
 body {
     padding-bottom: 60px;
-}
-
-
-
-
-.hero-section {
-    text-align: center;
-    padding-top: 20px;
-}
-
-
-
-.main-img {
-    width: 280px;      /* عرض الصورة */
-    height: 280px;     /* نفس العرض لجعلها مربعة تماماً */
-    object-fit: cover; /* لقص أطراف الصورة الزائدة والحفاظ على جودتها */
-    border-radius: 20px; /* حواف منحنية لتناسب التصميم */
-    box-shadow: 0 8px 20px rgba(0,0,0,0.1); /* ظل لإعطاء عمق */
-    margin-bottom: 20px;
-}
-
-
-
-    
-
-
-
-
-‎/* حاوية الصور الثلاث */
-.triple-images-container {
-    display: flex;            /* وضع الصور بجانب بعضها */
-    justify-content: center;   /* تجميعها في الوسط */
-    gap: 10px;                /* مسافة صغيرة بين الصور */
-    padding: 10px 20px;       /* مسافة من الأطراف */
-    margin-bottom: 20px;      /* مسافة قبل كلمة متجر سفير بيو */
-}
-
-‎/* تنسيق الصور الفردية */
-.triple-images-container img {
-    width: 30%;               /* توزيع المساحة بالتساوي */
-    aspect-ratio: 1 / 1;      /* جعلها مربعة تماماً مهما كان أصلها */
-    object-fit: cover;        /* منع تمدد الصورة المحرج */
-    border-radius: 12px;      /* حواف ناعمة تشبه الصورة الكبيرة */
-    box-shadow: 0 4px 8px rgba(0,0,0,0.05); /* ظل خفيف جداً */
-}
-
-
-
-
-
-.slider-container {
-    margin-top: 40px;   /* هذه القيمة هي التي ستنزل الصور لأسفل */
-    position: relative;
-    width: 300px;
-    height: 300px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-
-.slide {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 25px;
-    opacity: 0;         /* إخفاء الصور */
-    transition: opacity 1s ease-in-out; /* تأثير التلاشي */
-}
-
-.slide.active {
-    opacity: 1;         /* إظهار الصورة النشطة فقط */
 }
 
 
