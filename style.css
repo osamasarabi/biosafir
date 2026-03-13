@@ -1,153 +1,187 @@
-/* إعدادات الخط والصفحة */
-@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap');
-
+/* توحيد خلفية الموقع بالكامل */
 body {
+    background-color: #ffe6e6 !important; /* لون الكرش */
     margin: 0;
-    font-family: 'Cairo', sans-serif;
-    background-color: #fdf2f2;
+    padding: 0;
     direction: rtl;
-    padding-bottom: 80px; /* مساحة لكي لا يغطي الذيل على المنتجات */
+    font-family: 'Arial', sans-serif;
 }
 
-/* الرأس - Header */
+/* توحيد لون الرأس */
 header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 20px;
-    background-color: #fdf2f2;
+    background-color: #ffe6e6 !important; 
     position: sticky;
     top: 0;
     z-index: 1000;
+    border-bottom: none !important; /* حذف أي خط فاصل */
+    padding: 10px 20px;
 }
 
-.logo-area {
+/* توحيد لون الذيل */
+.main-footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #ffe6e6 !important; 
+    border-top: none !important;    /* التأكد من عدم وجود خط فاصل في الأسفل */
+    padding: 18px 0;
+    z-index: 2000;
+}
+
+
+
+
+
+.footer-link {
+    text-decoration: none;
+    color: #4f7033;
+    /* حذف Tajawal والعودة للخط العادي */
+    font-family: 'Impact', sans-serif; 
+    font-weight: bold;
+    font-size: 16px;
+    transition: 0.3s;
+    display: block;
+}
+
+
+/* لضمان توزيع المسافات بشكل احترافي مع الخط الجديد */
+.footer-nav {
     display: flex;
+    justify-content: space-around;
+    align-items: center;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+
+
+
+
+
+
+
+/* تنسيق الهيدر: السلة أقصى اليمين والشعار أقصى اليسار */
+header {
+    background-color: #ffe6e6;
+    padding: 12px 20px;
+    display: flex;
+    flex-direction: row; /* جعل السلة يمين والشعار يسار */
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+/* حاوية الشعار: تترتب من اليسار لليمن */
+.logo-container {
+    display: flex;
+    flex-direction: row-reverse; /* عكس الترتيب ليصبح BIO يسار و SAFIR يمينها */
     align-items: center;
     gap: 10px;
 }
 
-.bio-tag {
-    background: #5d7c5d;
+/* تصميم الشعار المنقسم (فاتح فوق وغامق تحت) */
+.logo-bio {
+    background: linear-gradient(to bottom, #94c173 50%, #4f7033 50%); 
     color: white;
-    padding: 2px 12px;
+    padding: 4px 12px;
     border-radius: 12px;
     font-weight: bold;
-    font-size: 14px;
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.brand-name {
+.logo-text {
     font-size: 20px;
     font-weight: bold;
     color: #333;
-    letter-spacing: 1px;
 }
 
-.cart-icon {
+/* السلة في أقصى اليمين */
+.cart-icon-container {
     position: relative;
+    display: flex;
+    align-items: center;
 }
 
-.cart-count {
+.cart-icon-container svg {
+    stroke: #76a04d;
+}
+
+.cart-badge {
     position: absolute;
     top: -5px;
-    left: -5px; /* لأن الاتجاه RTL */
-    background: #c66;
+    right: -12px;
+    background-color: #e74c3c;
     color: white;
-    font-size: 10px;
-    padding: 2px 6px;
-    border-radius: 50%;
-}
-
-/* قسم الترحيب */
-.welcome-section {
-    text-align: center;
-    padding: 30px 20px;
-}
-
-.welcome-section h1 {
-    font-size: 22px;
-    margin: 0;
-}
-
-.welcome-section p {
-    font-size: 14px;
-    color: #666;
-}
-
-/* شبكة المنتجات (9 منتجات - عمودين) */
-.products-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 15px;
-    padding: 0 15px;
-}
-
-.product-card {
-    background: white;
-    border-radius: 18px;
-    overflow: hidden;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.03);
-    cursor: pointer;
-    border: 1px solid rgba(0,0,0,0.05);
-}
-
-.product-image img {
-    width: 100%;
-    aspect-ratio: 1/1;
-    object-fit: cover;
-}
-
-.product-info {
-    padding: 10px;
-    text-align: center;
-}
-
-.product-info h3 {
-    font-size: 13px;
-    margin: 5px 0;
-    color: #444;
-}
-
-.price {
-    color: #5d7c5d;
-    font-weight: bold;
-    font-size: 15px;
-    margin: 5px 0;
-}
-
-.view-btn {
-    background: #5d7c5d;
-    color: white;
-    border: none;
-    padding: 7px;
-    border-radius: 8px;
-    width: 100%;
     font-size: 12px;
-    font-family: 'Cairo', sans-serif;
+    font-weight: bold;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-/* الذيل - Bottom Nav */
-.bottom-nav {
+.hero-section {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+
+
+
+
+
+
+/* تنسيق الفوتر الثابت باللون الوردي الفاتح */
+.main-footer {
     position: fixed;
     bottom: 0;
+    left: 0;
     width: 100%;
-    background: white;
+    background-color: #ffe6e6; /* اللون المطلوب */
+    padding: 18px 0; /* زيادة الطول قليلاً لتبدو الكلمات مريحة */
+    box-shadow: 0 -1px 5px rgba(0, 0, 0, 0.05);
+    z-index: 2000;
+}
+
+/* توزيع الكلمات بمسافات متساوية تماماً */
+.footer-nav {
     display: flex;
-    justify-content: space-around;
-    padding: 12px 0;
-    box-shadow: 0 -3px 10px rgba(0,0,0,0.05);
-    z-index: 1000;
+    justify-content: space-around; 
+    align-items: center;
+    max-width: 500px; /* تضييق المساحة قليلاً لتركيز الكلمات في المنتصف */
+    margin: 0 auto;
 }
 
-.bottom-nav a {
+
+/* العودة لخط Arial في الفوتر */
+.footer-link {
     text-decoration: none;
-    color: #888;
-    font-size: 13px;
-    font-weight: bold;
+    color: #4f7033;
+    font-family: Arial, Helvetica, sans-serif; /* الخط الافتراضي العادي */
+    font-weight: bold; /* جعل الكلمات غليظة وواضحة */
+    font-size: 17px;   /* حجم مناسب جداً لخط Arial */
+    transition: 0.3s;
+    display: block;
 }
 
-.bottom-nav a.active {
-    color: #5d7c5d;
+/* حذف أي كود @supports متعلق بخط مركزي إذا كان موجوداً */
+
+
+
+
+.footer-link:hover {
+    color: #94c173; /* يتغير للأخضر الفاتح عند اللمس */
+}
+
+/* مسافة أمان في أسفل الصفحة */
+body {
+    padding-bottom: 60px;
 }
 
 
