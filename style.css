@@ -1,90 +1,36 @@
-/* توحيد خلفية الموقع بالكامل */
+/* إعدادات الصفحة الأساسية */
 body {
-    background-color: #ffe6e6 !important; /* لون الكرش */
+    background-color: #ffe6e6; /* اللون الوردي من الصورة */
     margin: 0;
     padding: 0;
     direction: rtl;
     font-family: 'Arial', sans-serif;
+    padding-bottom: 80px; /* لتجنب تداخل المحتوى مع الفوتر الثابت */
 }
 
-/* توحيد لون الرأس */
+/* تنسيق الهيدر */
 header {
-    background-color: #ffe6e6 !important; 
+    background-color: #ffe6e6; 
     position: sticky;
     top: 0;
     z-index: 1000;
-    border-bottom: none !important; /* حذف أي خط فاصل */
-    padding: 10px 20px;
-}
-
-/* توحيد لون الذيل */
-.main-footer {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    background-color: #ffe6e6 !important; 
-    border-top: none !important;    /* التأكد من عدم وجود خط فاصل في الأسفل */
-    padding: 18px 0;
-    z-index: 2000;
-}
-
-
-
-
-
-.footer-link {
-    text-decoration: none;
-    color: #4f7033;
-    /* حذف Tajawal والعودة للخط العادي */
-    font-family: 'Impact', sans-serif; 
-    font-weight: bold;
-    font-size: 16px;
-    transition: 0.3s;
-    display: block;
-}
-
-
-/* لضمان توزيع المسافات بشكل احترافي مع الخط الجديد */
-.footer-nav {
+    padding: 15px 20px;
     display: flex;
-    justify-content: space-around;
-    align-items: center;
-    max-width: 500px;
-    margin: 0 auto;
-}
-
-
-
-
-
-
-
-
-/* تنسيق الهيدر: السلة أقصى اليمين والشعار أقصى اليسار */
-header {
-    background-color: #ffe6e6;
-    padding: 12px 20px;
-    display: flex;
-    flex-direction: row; /* جعل السلة يمين والشعار يسار */
     justify-content: space-between;
     align-items: center;
-    border-bottom: 1px solid #f0f0f0;
 }
 
-/* حاوية الشعار: تترتب من اليسار لليمن */
 .logo-container {
     display: flex;
-    flex-direction: row-reverse; /* عكس الترتيب ليصبح BIO يسار و SAFIR يمينها */
+    flex-direction: row-reverse; 
     align-items: center;
     gap: 10px;
 }
 
-/* تصميم الشعار المنقسم (فاتح فوق وغامق تحت) */
 .logo-bio {
     background: linear-gradient(to bottom, #94c173 50%, #4f7033 50%); 
     color: white;
-    padding: 4px 12px;
+    padding: 5px 14px;
     border-radius: 12px;
     font-weight: bold;
     font-size: 15px;
@@ -94,16 +40,15 @@ header {
 }
 
 .logo-text {
-    font-size: 20px;
+    font-size: 22px;
     font-weight: bold;
     color: #333;
+    letter-spacing: 1px;
 }
 
-/* السلة في أقصى اليمين */
 .cart-icon-container {
     position: relative;
-    display: flex;
-    align-items: center;
+    cursor: pointer;
 }
 
 .cart-icon-container svg {
@@ -112,11 +57,11 @@ header {
 
 .cart-badge {
     position: absolute;
-    top: -5px;
-    right: -12px;
+    top: -8px;
+    right: -10px;
     background-color: #e74c3c;
     color: white;
-    font-size: 12px;
+    font-size: 11px;
     font-weight: bold;
     width: 20px;
     height: 20px;
@@ -126,63 +71,118 @@ header {
     justify-content: center;
 }
 
+/* تنسيق المحتوى الرئيسي */
 .hero-section {
     text-align: center;
     padding: 40px 20px;
 }
 
+.hero-section h1 {
+    font-size: 26px;
+    color: #222;
+    margin-bottom: 15px;
+}
 
+.hero-section p {
+    font-size: 17px;
+    color: #555;
+}
 
+/* شبكة المنتجات */
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: 20px;
+    padding: 0 20px 40px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
 
+.product-card {
+    background: #ffffff;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.06);
+    transition: transform 0.3s ease;
+}
 
+.product-card:hover {
+    transform: translateY(-5px);
+}
 
+.product-image {
+    width: 100%;
+    height: 180px;
+    background-color: #f9f9f9;
+}
 
-/* تنسيق الفوتر الثابت باللون الوردي الفاتح */
+.product-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.product-info {
+    padding: 12px;
+    text-align: center;
+}
+
+.product-info h3 {
+    font-size: 15px;
+    color: #4f7033;
+    margin: 0;
+}
+
+/* الفوتر الثابت */
 .main-footer {
     position: fixed;
     bottom: 0;
     left: 0;
     width: 100%;
-    background-color: #ffe6e6; /* اللون المطلوب */
-    padding: 18px 0; /* زيادة الطول قليلاً لتبدو الكلمات مريحة */
-    box-shadow: 0 -1px 5px rgba(0, 0, 0, 0.05);
+    background-color: #ffe6e6; 
+    padding: 20px 0;
+    box-shadow: 0 -2px 10px rgba(0,0,0,0.05);
     z-index: 2000;
 }
 
-/* توزيع الكلمات بمسافات متساوية تماماً */
 .footer-nav {
     display: flex;
-    justify-content: space-around; 
+    justify-content: space-around;
     align-items: center;
-    max-width: 500px; /* تضييق المساحة قليلاً لتركيز الكلمات في المنتصف */
+    max-width: 600px;
     margin: 0 auto;
 }
 
-
-/* العودة لخط Arial في الفوتر */
 .footer-link {
     text-decoration: none;
     color: #4f7033;
-    font-family: Arial, Helvetica, sans-serif; /* الخط الافتراضي العادي */
-    font-weight: bold; /* جعل الكلمات غليظة وواضحة */
-    font-size: 17px;   /* حجم مناسب جداً لخط Arial */
+    font-weight: bold;
+    font-size: 16px;
     transition: 0.3s;
-    display: block;
 }
-
-/* حذف أي كود @supports متعلق بخط مركزي إذا كان موجوداً */
-
-
-
 
 .footer-link:hover {
-    color: #94c173; /* يتغير للأخضر الفاتح عند اللمس */
+    color: #94c173;
 }
 
-/* مسافة أمان في أسفل الصفحة */
-body {
-    padding-bottom: 60px;
+/* تحسينات للشاشات الصغيرة */
+@media (max-width: 480px) {
+    .products-grid {
+        grid-template-columns: repeat(2, 1fr); /* صورتين في الصف */
+        gap: 12px;
+        padding: 10px;
+    }
+    
+    .product-image {
+        height: 150px;
+    }
+    
+    .hero-section h1 {
+        font-size: 22px;
+    }
 }
+
+
 
 
 
