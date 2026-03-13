@@ -1,60 +1,155 @@
-<!DOCTYPE html>
-<html lang="ar" dir="rtl">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>متجر سفير بيو</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+/* إعدادات الخط والصفحة */
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap');
 
-    <header>
-        <div class="logo-area">
-            <span class="bio-tag">BIO</span>
-            <span class="brand-name">SAFIR</span>
-        </div>
-        <div class="cart-icon">
-            <img src="https://cdn-icons-png.flaticon.com/512/1170/1170678.png" alt="سلة" width="30">
-            <span class="cart-count">3</span>
-        </div>
-    </header>
+body {
+    margin: 0;
+    font-family: 'Cairo', sans-serif;
+    background-color: #fdf2f2;
+    direction: rtl;
+    padding-bottom: 80px; /* مساحة لكي لا يغطي الذيل على المنتجات */
+}
 
-    <main>
-        <section class="welcome-section">
-            <h1>مرحباً بكم في متجر سفير بيو</h1>
-            <p>أفضل المنتجات الطبيعية والعضوية بين يديك</p>
-        </section>
+/* الرأس - Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background-color: #fdf2f2;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
 
-        <section class="products-grid">
-            <script>
-                for(let i=1; i<=9; i++) {
-                    document.write(`
-                        <div class="product-card" onclick="openProductPage(${i})">
-                            <div class="product-image">
-                                <img src="images1${(i % 4) + 1}.jpg" alt="منتج ${i}">
-                            </div>
-                            <div class="product-info">
-                                <h3>محفظة الجيب - موديل ${i}</h3>
-                                <p class="price">150 د.م</p>
-                                <button class="add-btn">عرض التفاصيل</button>
-                            </div>
-                        </div>
-                    `);
-                }
-            </script>
-        </section>
-    </main>
+.logo-area {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
 
-    <nav class="bottom-nav">
-        <a href="#" class="active">رئيسية</a>
-        <a href="#">متجر</a>
-        <a href="#">جريدة</a>
-        <a href="#">إعدادات</a>
-    </nav>
+.bio-tag {
+    background: #5d7c5d;
+    color: white;
+    padding: 2px 12px;
+    border-radius: 12px;
+    font-weight: bold;
+    font-size: 14px;
+}
 
-    <script src="script.js"></script>
-</body>
-</html>
+.brand-name {
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+    letter-spacing: 1px;
+}
+
+.cart-icon {
+    position: relative;
+}
+
+.cart-count {
+    position: absolute;
+    top: -5px;
+    left: -5px; /* لأن الاتجاه RTL */
+    background: #c66;
+    color: white;
+    font-size: 10px;
+    padding: 2px 6px;
+    border-radius: 50%;
+}
+
+/* قسم الترحيب */
+.welcome-section {
+    text-align: center;
+    padding: 30px 20px;
+}
+
+.welcome-section h1 {
+    font-size: 22px;
+    margin: 0;
+}
+
+.welcome-section p {
+    font-size: 14px;
+    color: #666;
+}
+
+/* شبكة المنتجات (9 منتجات - عمودين) */
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    padding: 0 15px;
+}
+
+.product-card {
+    background: white;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.03);
+    cursor: pointer;
+    border: 1px solid rgba(0,0,0,0.05);
+}
+
+.product-image img {
+    width: 100%;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+}
+
+.product-info {
+    padding: 10px;
+    text-align: center;
+}
+
+.product-info h3 {
+    font-size: 13px;
+    margin: 5px 0;
+    color: #444;
+}
+
+.price {
+    color: #5d7c5d;
+    font-weight: bold;
+    font-size: 15px;
+    margin: 5px 0;
+}
+
+.view-btn {
+    background: #5d7c5d;
+    color: white;
+    border: none;
+    padding: 7px;
+    border-radius: 8px;
+    width: 100%;
+    font-size: 12px;
+    font-family: 'Cairo', sans-serif;
+}
+
+/* الذيل - Bottom Nav */
+.bottom-nav {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background: white;
+    display: flex;
+    justify-content: space-around;
+    padding: 12px 0;
+    box-shadow: 0 -3px 10px rgba(0,0,0,0.05);
+    z-index: 1000;
+}
+
+.bottom-nav a {
+    text-decoration: none;
+    color: #888;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.bottom-nav a.active {
+    color: #5d7c5d;
+}
+
 
 
 
