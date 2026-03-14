@@ -190,7 +190,7 @@ header {
 .group-title {
     text-align: right; /* جعل كلمة محفظة الجيب على اليمين تماماً */
     font-size: 1.2rem;
-    color: #5d7c5d; /* لون متناسق مع شعارك */
+    color: #000000; /* لون متناسق مع شعارك */
     margin: 20px 0;
     padding-right: 10px; /* مسافة بسيطة عن الحافة */
     border-right: 4px solid #5d7c5d; /* خط جمالي صغير على اليمين */
